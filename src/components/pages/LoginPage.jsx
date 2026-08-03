@@ -1,12 +1,11 @@
-import Card from "../ui/Card.jsx";
+import Card from "../resuable_comp/Card.jsx";
 import { LoginForm } from "../auth/forms.js";
 
-export default function LoginPage({ onSwitch, onForgotPassword, onLoginSuccess }) {
+export default function LoginPage({ onSwitch, onLoginSuccess }) {
   return (
     <Card maxWidth="max-w-md">
       <LoginForm
         onSwitch={onSwitch}
-        onForgotPassword={onForgotPassword}
         onLoginSuccess={onLoginSuccess}
       />
     </Card>

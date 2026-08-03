@@ -2,10 +2,8 @@ import { useState } from "react";
 import Container from "../layout/Container.jsx";
 import LoginPage from "./LoginPage.jsx";
 import SignupPage from "./SignupPage.jsx";
-import ForgotPasswordPage from "./ForgotPasswordPage.jsx";
-import ResetPasswordPage from "./ResetPasswordPage.jsx";
 
-export default function AuthenticationPage({ initialMode = "login", onNavigateToHome }) {
+export default function AuthenticationPage({ initialMode = "login", onNavigateToHome, onLoginSuccess }) {
   const [mode, setMode] = useState(initialMode);
 
   return (
@@ -23,20 +21,12 @@ export default function AuthenticationPage({ initialMode = "login", onNavigateTo
         {mode === "login" && (
           <LoginPage
             onSwitch={(targetMode) => setMode(targetMode || "signup")}
-            onForgotPassword={() => setMode("forgot-password")}
+            onLoginSuccess={onLoginSuccess}
           />
         )}
 
         {mode === "signup" && (
           <SignupPage onSwitch={(targetMode) => setMode(targetMode || "login")} />
-        )}
-
-        {mode === "forgot-password" && (
-          <ForgotPasswordPage onSwitch={(targetMode) => setMode(targetMode || "login")} />
-        )}
-
-        {mode === "reset-password" && (
-          <ResetPasswordPage onSwitch={(targetMode) => setMode(targetMode || "login")} />
         )}
       </div>
     </Container>

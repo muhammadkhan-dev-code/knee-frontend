@@ -17,12 +17,17 @@ export default function App() {
 
   return (
     <div className="w-full min-h-screen font-sans">
-      {currentPage === "landing" ? (
-        <LandingPage onNavigateToAuth={navigateToAuth} />
-      ) : (
+      {currentPage === "landing" && (
+        <LandingPage
+          onNavigateToAuth={navigateToAuth}
+        />
+      )}
+
+      {currentPage === "auth" && (
         <AuthenticationPage
           initialMode={authMode}
           onNavigateToHome={navigateToLanding}
+          onLoginSuccess={navigateToLanding}
         />
       )}
     </div>

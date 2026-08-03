@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Mail } from "lucide-react";
-import { Button, Input, PasswordInput } from "../ui/resuedComponents.js";
+import { Button, Input, PasswordInput } from "../resuable_comp/resuedComponents.js";
 
-export default function LoginForm({ onSwitch, onForgotPassword, onLoginSuccess }) {
+export default function LoginForm({ onSwitch, onLoginSuccess }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
@@ -40,13 +40,6 @@ export default function LoginForm({ onSwitch, onForgotPassword, onLoginSuccess }
             <span className="text-xs font-bold tracking-wider text-slate-500 uppercase">
               PASSWORD
             </span>
-            <button
-              type="button"
-              onClick={onForgotPassword}
-              className="text-xs font-semibold text-[#1e204d] hover:text-indigo-900 hover:underline cursor-pointer"
-            >
-              Forgot password?
-            </button>
           </div>
 
           <PasswordInput

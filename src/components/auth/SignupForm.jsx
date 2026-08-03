@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Mail, User, Building2, ShieldCheck, Lock } from "lucide-react";
-import { Input, PasswordInput, Button } from "../ui/resuedComponents.js";
+import { Input, PasswordInput, Button } from "../resuable_comp/resuedComponents.js";
 
 export default function SignupForm({ onSwitch, onSignupSuccess }) {
   const [fullName, setFullName] = useState("");
