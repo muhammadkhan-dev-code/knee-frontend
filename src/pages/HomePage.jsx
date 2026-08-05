@@ -1,4 +1,9 @@
 import { Navbar,Footer} from '../components/components.js'
+import About from '../components/About.jsx'
+import  dashboard_image from '../assets/images/dashboard-preview.png'
+import doctor_image from '../assets/images/doctor_image.jpg'
+
+
 
 const HomePage = () => {
   return (
@@ -32,7 +37,7 @@ const HomePage = () => {
         <div className='w-full flex flex-col lg:flex-row gap-6 mt-4'>
           <div className='w-full lg:w-1/3 relative rounded-[2rem] overflow-hidden shadow-xl shadow-gray-200/50 group h-[400px] lg:h-[500px]'>
             <img
-              src='/doctor_image.jpg'
+              src={doctor_image}
               alt='Dr. Daniel Mathew'
               className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-105'
             />
@@ -44,7 +49,7 @@ const HomePage = () => {
               <div className='bg-white/95 backdrop-blur-md rounded-[1.5rem] p-4 flex items-center justify-between shadow-lg'>
                 <div className='flex items-center space-x-3'>
                   <img
-                    src='/doctor_image.jpg'
+                    src={doctor_image}
                     alt='Avatar'
                     className='w-12 h-12 rounded-full object-cover'
                   />
@@ -67,15 +72,24 @@ const HomePage = () => {
           <div className='w-full lg:w-2/3 bg-white rounded-[2rem] overflow-hidden shadow-xl shadow-gray-200/50 border-10 border-b-0 border-[#357B62] p-2 h-[400px] lg:h-[500px] flex flex-col relative'>
             <div className='w-full h-full rounded-[1.5rem] overflow-hidden bg-[#eff8f4] flex items-center justify-center p-6 lg:p-10 relative group'>
               <img
-                src='/dashboard-preview.png'
+                src={dashboard_image}
                 alt='Dashboard Preview'
                 className='w-full h-full  object-contain rounded-xl shadow-2xl  hover:cursor-pointer transition-transform duration-700 group-hover:scale-[1.02]'
               />
             </div>
           </div>
         </div>
-      </main>
 
+        <div>
+
+        </div>
+      </main>
+      <div className='max-w-7xl mx-auto px-6'>
+        <About />
+        </div>
+         
+
+        
       <Footer />
     </div>
   )

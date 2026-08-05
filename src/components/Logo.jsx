@@ -1,14 +1,9 @@
-import React from "react";
-import logo from "/logo_svg.svg"
+import logo from '/logo_svg.svg'
 
-const Logo = ({
-    size = 80,
-    className = "",
-    animated = true,
-}) => {
-    return (
-        <>
-            <style>{`
+const Logo = ({ size = 80, className = '', animated = true }) => {
+  return (
+    <>
+      <style>{`
         @keyframes koaRotateGlow {
           0% {
             transform: rotate(0deg) scale(1);
@@ -52,15 +47,15 @@ const Logo = ({
         }
       `}</style>
 
-            <img
-                src={logo}
-                alt="KOA AI Logo"
-                width={size}
-                height={size}
-                className={`${animated ? "koa-logo-animation" : ""} ${className}`}
-            />
-        </>
-    );
-};
+      <img
+        src={logo}
+        alt='KOA AI Logo'
+        width={size}
+        height={size}
+        className={`${animated ? 'koa-logo-animation' : ''} ${className}`}
+      />
+    </>
+  )
+}
 
-export default Logo;
+export default Logo
