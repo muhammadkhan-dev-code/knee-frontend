@@ -8,16 +8,20 @@ import {
   FaLinkedin,
   FaLock
 } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 
 import { Button, Input, Logo, SocialButton } from '../components.js'
 
-export default function Login () {
+export default function Login() {
+  const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false)
 
   return (
     <div className='w-full max-w-sm'>
-      <div className='relative -top-5 flex items-center gap-2 mx-auto '>
-        <Logo className='h-8 w-auto' />
+     <div className='flex justify-center mb-2'>
+        <div className='p-3  '>
+          <Logo size={44} className='h-11 w-11' />
+        </div>
       </div>
 
       <div className='mt-1 text-center'>
@@ -29,7 +33,7 @@ export default function Login () {
         </p>
       </div>
 
-     
+
       <div className='mt-2'>
         <Input
           label='Email Address'
@@ -38,7 +42,7 @@ export default function Login () {
         />
       </div>
 
-    
+
       <div className='mt-1'>
         <Input
           label='Password'
@@ -104,7 +108,10 @@ export default function Login () {
       <p className='mt-3 text-center text-xs text-gray-500'>
         Don't have an account?{''}
         <span className='inline-flex '>
-          <button className='ml-2 font-semibold text-[#357B62] transition hover:text-[#2B6450] hover:cursor-pointer hover:underline'>
+          <button
+            onClick={() => navigate('/register')}
+            className='ml-2 font-semibold text-[#357B62] transition hover:text-[#2B6450] hover:cursor-pointer hover:underline'
+          >
             Sign Up
           </button>
         </span>

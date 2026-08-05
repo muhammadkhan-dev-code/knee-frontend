@@ -1,9 +1,9 @@
-import { Navbar,Footer} from '../components/components.js'
-import About from '../components/About.jsx'
-import  dashboard_image from '../assets/images/dashboard-preview.png'
+import { Link } from 'react-router-dom'
+import dashboard_image from '../assets/images/dashboard-preview.png'
 import doctor_image from '../assets/images/doctor_image.jpg'
-
-
+import LaptopImage from '../assets/images/laptop_image.png'
+import About from '../components/About.jsx'
+import { Footer, Navbar } from '../components/components.js'
 
 const HomePage = () => {
   return (
@@ -80,16 +80,188 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div>
-
-        </div>
+        <div></div>
       </main>
       <div className='max-w-7xl mx-auto px-6'>
         <About />
-        </div>
-         
+      </div>
+      <section>
+        <div className='bg-[#f7fcfa] min-h-screen'>
+          <div className='max-w-6xl mx-auto px-5  lg:py-10'>
+            <div className='text-center mb-4 lg:mb-16'>
+              <h1 className='text-2xl lg:text-3xl font-bold text-[#0d2320] leading-tight'>
+                Ready to Get Started with Smarter Knee Analysis?
+              </h1>
+              <p className='mt-2 text-sm lg:text-xl text-gray-600 max-w-3xl mx-auto'>
+                Join Thousands of Professionals Using KOA-AI to Enhance
+                Diagnosis in Minutes.
+                <br />
+                Create Your Account or Log In Below.
+              </p>
+            </div>
 
-        
+            <div className='bg-white rounded-2xl border border-gray-100 overflow-hidden '>
+              <div className='grid  lg:grid-cols-2 min-h-100 '>
+                <div className='p-6 lg:p-12 flex flex-col justify-center'>
+                  <div className='flex justify-center'>
+                    <div className='w-15 h-15 rounded-full bg-[#376e52] flex items-center justify-center'>
+                      <svg
+                        className='w-7 h-7 text-white'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                      >
+                        <path
+                          strokeWidth={1}
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <h2 className='text-center text-xl lg:text-2xl font-bold text-[#152b28] mt-3'>
+                    Create Your Account for
+                    <br />
+                    Seamless Analysis and Reports.
+                  </h2>
+
+                  <div className='relative mt-8'>
+                    <div className='absolute top-8 left-[10%] right-[10%] border-t-2 border-dashed border-gray-300' />
+
+                    <div className='grid grid-cols-3 gap-6 relative px-2'>
+                      <div className='text-center'>
+                        <div className='relative inline-flex'>
+                          <span className='absolute -top-3 -right-3 w-7 h-7 rounded-full bg-white border-2 border-gray-300 text-xs font-bold flex items-center justify-center text-[#1E6F47]'>
+                            1
+                          </span>
+                          <div className='w-12 h-12 rounded-full bg-white border-2 border-gray-200 shadow-md flex items-center justify-center text-[#1E6F47]'>
+                            <svg
+                              className='w-8 h-8'
+                              fill='none'
+                              stroke='currentColor'
+                              viewBox='0 0 24 24'
+                            >
+                              <path
+                                strokeWidth={2}
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                d='M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12'
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <h3 className='font-bold mt-4 text-[#152b28] text-sm'>
+                          Upload X-ray
+                        </h3>
+                        <p className='text-xs text-gray-500 mt-2'>
+                          Upload your knee X-ray image securely.
+                        </p>
+                      </div>
+
+                      {/* Step 2 */}
+                      <div className='text-center'>
+                        <div className='relative inline-flex'>
+                          <span className='absolute -top-3 -right-3 w-7 h-7 rounded-full bg-white border-2 border-gray-300 text-xs font-bold flex items-center justify-center text-[#1E6F47]'>
+                            2
+                          </span>
+                          <div className='w-12 h-12 rounded-full bg-white border-2 border-gray-200 shadow-md flex items-center justify-center text-[#1E6F47]'>
+                            <svg
+                              className='w-8 h-8'
+                              fill='none'
+                              stroke='currentColor'
+                              viewBox='0 0 24 24'
+                            >
+                              <path
+                                strokeWidth={2}
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                d='M9.75 17L9 21l3-2 3 2-.75-4M5 10a7 7 0 1114 0c0 3.866-3.134 7-7 7s-7-3.134-7-7z'
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <h3 className='font-bold mt-4 text-[#152b28] text-sm'>
+                          AI Analysis
+                        </h3>
+                        <p className='text-xs text-gray-500 mt-2'>
+                          Our Analyzes and predicts KL grade.
+                        </p>
+                      </div>
+
+                      {/* Step 3 */}
+                      <div className='text-center'>
+                        <div className='relative inline-flex'>
+                          <span className='absolute -top-3 -right-3 w-7 h-7 rounded-full bg-white border-2 border-gray-300 text-xs font-bold flex items-center justify-center text-[#1E6F47]'>
+                            3
+                          </span>
+                          <div className='w-12 h-12 rounded-full bg-white border-2 border-gray-200 shadow-md flex items-center justify-center text-[#1E6F47]'>
+                            <svg
+                              className='w-8 h-8'
+                              fill='none'
+                              stroke='currentColor'
+                              viewBox='0 0 24 24'
+                            >
+                              <path
+                                strokeWidth={2}
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                d='M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <h3 className='font-bold mt-4 text-[#152b28] text-sm'>
+                          View Results
+                        </h3>
+                        <p className='text-xs text-gray-500 mt-2'>
+                          See results, heatmap and download report.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='grid grid-cols-2 gap-3 mt-10'>
+                    <Link to='/register'>
+                      <button className='w-full py-3 rounded-xl bg-[#1E6F47] text-white font-semibold flex items-center justify-center gap-2 hover:bg-[#17553A]'>
+                        <svg
+                          className='w-5 h-5'
+                          fill='none'
+                          stroke='currentColor'
+                          viewBox='0 0 24 24'
+                        >
+                          <path
+                            strokeWidth={2}
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            d='M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z'
+                          />
+                        </svg>
+                        Create an Account
+                      </button>
+                    </Link>
+                    <Link to='/login'>
+                      <button className='w-full py-3 rounded-xl border-2 border-[#1E6F47] text-[#1E6F47] font-semibold hover:bg-[#f2faf7]'>
+                        Log In →
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className='relative flex items-center justify-center p-10 lg:p-12 bg-gradient-to-br from-green-500 via-green-400'>
+                  <img
+                    src={LaptopImage}
+                    alt='KOA-AI Laptop Preview'
+                    className='relative z-10 w-full h-full object-contain drop-shadow-2xl'
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   )
