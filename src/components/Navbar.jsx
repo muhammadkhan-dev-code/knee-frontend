@@ -6,8 +6,8 @@ const Navbar = () => {
     <div className='w-full flex justify-center pt-4 px-2 absolute top-0 z-50'>
       <nav className='bg-white rounded-lg px-3 py-[0.3rem] flex items-center justify-between w-3xl max-w-4xl shadow-sm border border-gray-100'>
         <div className='flex items-center'>
-          <div className='p-2 bg-gray-50 rounded-xl border border-gray-100'>
-            <Logo size={24} animated={true} />
+          <div className='p-2 rounded-xl'>
+            <Logo size={24} animated={true}  className=' hover:cursor-pointer'/>
           </div>
         </div>
 

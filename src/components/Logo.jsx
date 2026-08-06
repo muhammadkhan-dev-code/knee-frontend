@@ -4,52 +4,31 @@ const Logo = ({ size = 80, className = '', animated = true }) => {
   return (
     <>
       <style>{`
-        @keyframes koaRotateGlow {
+        @keyframes koaRotate {
           0% {
-            transform: rotate(0deg) scale(1);
-            filter:
-              drop-shadow(0 0 5px rgba(43,127,117,.35))
-              drop-shadow(0 0 10px rgba(43,127,117,.25));
-          }
-
-          25% {
-            filter:
-              drop-shadow(0 0 10px rgba(43,127,117,.55))
-              drop-shadow(0 0 18px rgba(43,127,117,.40));
+            transform: rotate(0deg);
           }
 
           50% {
-            transform: rotate(180deg) scale(1.02);
-            filter:
-              drop-shadow(0 0 16px rgba(43,127,117,.85))
-              drop-shadow(0 0 30px rgba(43,127,117,.65))
-              drop-shadow(0 0 45px rgba(43,127,117,.35));
-          }
-
-          75% {
-            filter:
-              drop-shadow(0 0 10px rgba(43,127,117,.55))
-              drop-shadow(0 0 18px rgba(43,127,117,.40));
+            transform: rotate(180deg);
           }
 
           100% {
-            transform: rotate(360deg) scale(1);
-            filter:
-              drop-shadow(0 0 5px rgba(43,127,117,.35))
-              drop-shadow(0 0 10px rgba(43,127,117,.25));
+            transform: rotate(360deg);
           }
         }
 
         .koa-logo-animation {
-          animation: koaRotateGlow 12s linear infinite;
+          animation: koaRotate 12s linear infinite;
           transform-origin: center;
-          will-change: transform, filter;
+          will-change: transform;
+          display: block;
         }
       `}</style>
 
       <img
         src={logo}
-        alt='KOA AI Logo'
+        alt="KOA AI Logo"
         width={size}
         height={size}
         className={`${animated ? 'koa-logo-animation' : ''} ${className}`}

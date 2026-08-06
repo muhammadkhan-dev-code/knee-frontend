@@ -160,7 +160,7 @@ const HomePage = () => {
                         </p>
                       </div>
 
-                      {/* Step 2 */}
+                     
                       <div className='text-center'>
                         <div className='relative inline-flex'>
                           <span className='absolute -top-3 -right-3 w-7 h-7 rounded-full bg-white border-2 border-gray-300 text-xs font-bold flex items-center justify-center text-[#1E6F47]'>
@@ -190,7 +190,7 @@ const HomePage = () => {
                         </p>
                       </div>
 
-                      {/* Step 3 */}
+                     
                       <div className='text-center'>
                         <div className='relative inline-flex'>
                           <span className='absolute -top-3 -right-3 w-7 h-7 rounded-full bg-white border-2 border-gray-300 text-xs font-bold flex items-center justify-center text-[#1E6F47]'>
