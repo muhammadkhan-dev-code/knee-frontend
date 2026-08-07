@@ -6,4 +6,9 @@ export { default as Input } from './Input';
 export { default as SocialButton } from './SocialButton';
 export { default as Login } from './auth/Login';
 export { default as Register } from './auth/Register';
+export { default as WorkflowSection } from './WrokFlowSection';
+export { default as TechnologySection } from './TechnologySection';
+export { default as AIResultCard } from './AIResultCard';
+export { default as CTASection } from './CTASection';
+
 
